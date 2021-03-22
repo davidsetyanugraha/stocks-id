@@ -32,7 +32,7 @@ const _scrapePrices = async (url: string, stockCode: string, page: puppeteer.Pag
       if (date && price)
         result.push({ date, price }) 
     }
-    result.unshift({ date: 'Now', price: document.querySelector("span[data-reactid='32']")?.innerHTML }) 
+    result.unshift({ date: 'Now', price: document.querySelector("span[data-reactid='32']")?.innerHTML! }) 
 
     return result
   })
